@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Moodle Attendance Helper</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main>
+    <h1>Moodle Attendance Helper</h1>
+
+    <label for="studentIds">Student IDs</label>
+    <textarea id="studentIds" rows="7" spellcheck="false" placeholder="One ID per line (commas and spaces also work)"></textarea>
+    <p class="hint">Paste IDs separated by newlines, commas, semicolons, or spaces.</p>
+
+    <label for="weekIndex">Week index (i)</label>
+    <input id="weekIndex" type="number" min="0" step="1" value="0">
+    <p class="hint">The extension targets the (i + 1)-th <code>td</code> after the ID cell. Thus i = 0 means the next cell.</p>
+
+    <div class="actions">
+      <button id="previewButton" class="secondary" type="button">Preview</button>
+      <button id="fillButton" type="button" disabled>Fill with 1</button>
+    </div>
+
+    <section id="results" aria-live="polite" hidden>
+      <h2 id="resultsTitle">Preview</h2>
+      <p id="summary"></p>
+      <ul id="resultList"></ul>
+    </section>
+    <p class="footer">This changes input values in the open tab. It does not submit the page.</p>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Moodle Attendance Helper",
+  "version": "1.0.0",
+  "description": "Fill Moodle attendance/grade inputs for a list of student IDs.",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_title": "Moodle Attendance Helper",
+    "default_popup": "popup.html"
+  }
+}
